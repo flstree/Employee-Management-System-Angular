@@ -1,0 +1,22 @@
+<div class="row" *ngIf="employee">
+    <div class="col s12 m12">
+        <h2 class="header">{{ employee.firstname }} {{ employee.lastname }}</h2>
+        <div class="card horizontal">
+            <div class="card-image">
+                <img src="{{ employee.avatar }}">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <h5>Age: <span>{{ employee.age }}</span></h5>
+                    <h5>Designation: <span>{{ employee.designation}}</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" *ngIf="!employee">
+    <div class="col s12 m12">
+        <h2 class="header">Employee Record does not exist</h2>
+    </div>
+</div>
