@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Employee } from '../../entity/employee'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employeedetail',
@@ -9,12 +10,14 @@ import { Employee } from '../../entity/employee';
 export class EmployeedetailComponent implements OnInit {
   @Input() employee: Employee;
 
-  constructor() { 
-    console.log("constructor: ", this.employee);
+  constructor(private router: Router) { 
   }
 
   ngOnInit() {
-    console.log("onInit: ", this.employee);
+  }
+
+  onView(id){
+    this.router.navigate(['employee', id]);
   }
 
 }

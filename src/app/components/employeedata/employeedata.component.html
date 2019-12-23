@@ -10,6 +10,10 @@
                     <h5>Age: <span>{{ employee.age }}</span></h5>
                     <h5>Designation: <span>{{ employee.designation}}</span></h5>
                 </div>
+                <div class="card-action">
+                    <a routerLink="/employees/edit/{{employee.id}}">Edit</a>
+                    <a routerLink="/employees">Go back</a>
+                </div>
             </div>
         </div>
     </div>

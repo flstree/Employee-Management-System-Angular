@@ -12,7 +12,7 @@ export class EmployeeServiceService {
   constructor(private http: HttpClient) { 
     this.employees = [
       {
-        "id": "1",
+        "id": "dfsjs8Ewds",
         "firstname": "John",
         "lastname": "Doe",
         "age": 26,
@@ -20,7 +20,7 @@ export class EmployeeServiceService {
         "avatar": "https://thispersondoesnotexist.com/image"
       },
       {
-        "id": "2",
+        "id": "ueusndas12",
         "firstname": "Mark",
         "lastname": "Doe",
         "age": 32,
@@ -28,11 +28,11 @@ export class EmployeeServiceService {
         "avatar": "https://thispersondoesnotexist.com/image"
       },
       {
-        "id": "3",
-        "firstname": "Mark",
+        "id": "iuieTYSsa3",
+        "firstname": "Jenny",
         "lastname": "Doe",
-        "age": 32,
-        "designation": "HOD, Technology",
+        "age": 27,
+        "designation": "Marketing Strategist",
         "avatar": "https://thispersondoesnotexist.com/image"
       }
     ];
@@ -60,6 +60,16 @@ export class EmployeeServiceService {
 
   getEmployee(id:string): Employee{
     return this.employees.find(employee => employee.id === id);
+  }
+
+  uniqid(length: number = 10): string {
+    let text = "";
+    const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for(let i = 0; i < length; i++)
+     text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
   }
 
 }

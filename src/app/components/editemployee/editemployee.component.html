@@ -1,3 +1,48 @@
-<p>
-  editemployee works!
-</p>
+<div class="row">
+    <div class="col s12 m10 valign center">
+        <div class="card horizontal center-div">
+            <div class="row center-div">
+                <form class="col s12" [formGroup]="empData">
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input type="text" id="icon_firstname" class="validate" formControlName="firstname">
+                            <label for="icon_firstname">First Name</label>
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input type="text" id="icon_lastname" class="validate" formControlName="lastname">
+                            <label for="icon_lastname">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">access_time</i>
+                            <input type="number" id="icon_age" class="validate" formControlName="age">
+                            <label for="icon_age">Age</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">work</i>
+                            <input type="text" id="icon_designation" class="validate" formControlName="designation">
+                            <label for="icon_designation">Designation</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="waves-effect blue darken-3 btn" (click)="save()">
+                            <i class="material-icons left">add</i>
+                            Save
+                        </button>
+                        <button class="waves-effect red darken-4 btn" (click)="cancel()">
+                            <i class="material-icons left">clear</i>
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<pre>{{ empData.value | json }}</pre>

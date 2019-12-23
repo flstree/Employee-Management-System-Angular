@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import AppRoutes from './app.routes';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -30,7 +31,7 @@ import { EmployeeServiceService } from './services/employee-service.service';
     BannerComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, RouterModule.forRoot(AppRoutes)
+    BrowserModule, HttpClientModule, RouterModule.forRoot(AppRoutes), ReactiveFormsModule
   ],
   providers: [EmployeeServiceService],
   bootstrap: [AppComponent]
